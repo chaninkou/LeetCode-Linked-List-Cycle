@@ -13,7 +13,7 @@ public class Main {
 		
 		CheckCycleLinkedListFunction solution = new CheckCycleLinkedListFunction();
 		
-		System.out.println(solution.hasCycle(head));
+		System.out.println(solution.hasCycle1(head));
 		
 	}
 }

@@ -1,5 +1,8 @@
 package circularLinkedList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class CheckCycleLinkedListFunction {
     public boolean hasCycle(ListNode head) {
         ListNode walker = head;
@@ -21,5 +24,21 @@ public class CheckCycleLinkedListFunction {
         
         // return false if its a normal linked list
         return false;
+    }
+    
+    public boolean hasCycle1(ListNode head){
+    	Set<ListNode> set = new HashSet<>();
+    	
+    	while(head != null){
+    		if(set.contains(head)){
+    			return true;
+    		} else {
+    			set.add(head);
+    		}
+    		
+    		head = head.next;
+    	}
+    	
+    	return false;
     }
 }
