@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class CheckCycleLinkedListFunction {
+	// slow and fast pointer pointers methods
     public boolean hasCycle(ListNode head) {
         ListNode walker = head;
         ListNode runner = head;
@@ -26,16 +27,19 @@ public class CheckCycleLinkedListFunction {
         return false;
     }
     
+    // Using a hashset to store node that we seen before
     public boolean hasCycle1(ListNode head){
     	Set<ListNode> set = new HashSet<>();
     	
     	while(head != null){
+    		// Check if its already in hashset
     		if(set.contains(head)){
     			return true;
     		} else {
     			set.add(head);
     		}
     		
+    		// update pointer
     		head = head.next;
     	}
     	
