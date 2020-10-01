@@ -1,4 +1,4 @@
-package circularLinkedList;
+package leetcode141;
 
 public class ListNode {
 	int val;
