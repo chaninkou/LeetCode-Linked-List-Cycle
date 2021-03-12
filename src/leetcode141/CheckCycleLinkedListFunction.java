@@ -27,7 +27,7 @@ public class CheckCycleLinkedListFunction {
         return false;
     }
     
-    // Using a hashset to store node that we seen before
+    // Using a hashset to store node that we have seen before
     public boolean hasCycle1(ListNode head){
     	Set<ListNode> set = new HashSet<>();
     	
