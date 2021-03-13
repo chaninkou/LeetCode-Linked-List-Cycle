@@ -17,7 +17,7 @@ public class CheckCycleLinkedListFunction {
             // Runner will run two step
             runner = runner.next.next;
             
-            // They will eventually meet each other if they are circular
+            // They will eventually meet each other if there are a cycle.
             if(walker == runner){
                 return true;
             }
